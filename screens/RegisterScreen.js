@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, Alert, TouchableOpacity, StyleSheet } from 'react-native';
+import { View, Text, TextInput, Alert, TouchableOpacity, StyleSheet, Image } from 'react-native';
 import { auth } from '../firebaseConfig';
 import { createUserWithEmailAndPassword, updateProfile } from 'firebase/auth';
 
@@ -26,6 +26,13 @@ export default function RegisterScreen({ navigation }) {
 
   return (
     <View style={styles.container}>
+
+      <Image
+      source={require('../assets/loginImage.png')} // asset image use pannalam
+      // alternatively online image: source={{ uri: 'https://yoururl.com/image.png' }}
+      style={styles.topImage}
+      resizeMode="contain"
+      />
       <Text style={styles.headerText}>Register to Continue</Text>
       <TextInput
         style={styles.input}
@@ -72,10 +79,11 @@ export default function RegisterScreen({ navigation }) {
 
 const styles = StyleSheet.create({
   container: { flex: 1, justifyContent: 'center', padding: 20, backgroundColor: '#F9FAFD' },
+  topImage: { width: 180, height: 140, alignSelf: 'center', marginBottom: 15 },
   headerText: { fontSize: 18, textAlign: 'center', marginBottom: 25, color: '#333' },
   input: { backgroundColor: 'white', borderRadius: 14, marginBottom: 15, borderWidth: 1, borderColor: '#eee', padding: 15, fontSize: 16, elevation: 2 },
-  registerButton: { backgroundColor: '#EAEAF6', borderRadius: 25, alignItems: 'center', padding: 13, marginTop: 5, marginBottom: 15 },
-  registerButtonText: { fontSize: 17, color: '#444', fontWeight: 'bold' },
-  loginContainer: { flexDirection: 'row', alignItems: 'center', justifyContent: 'center' },
-  loginText: { color: '#BB86FC', fontWeight: 'bold' }
+  registerButton: { backgroundColor: '#b47ff5ff', borderRadius: 25, alignItems: 'center', padding: 13, marginTop: 5, marginBottom: 15 },
+  registerButtonText: { fontSize: 17, color: '#f2ececff', fontWeight: 'bold' },
+  loginContainer: { flexDirection: 'row', alignItems: 'center', justifyContent: 'center',marginBottom: 150 },
+  loginText: { color: '#903bf7ff', fontWeight: 'bold' }
 });
