@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, Alert, TouchableOpacity, StyleSheet, Image } from 'react-native';
+import { View, Text, TextInput, Alert, TouchableOpacity, StyleSheet, Image, ScrollView } from 'react-native';
 import { auth } from '../firebaseConfig';
 import { createUserWithEmailAndPassword, updateProfile } from 'firebase/auth';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
+
 
 export default function RegisterScreen({ navigation }) {
   const [username, setUsername] = useState('');
@@ -25,6 +27,8 @@ export default function RegisterScreen({ navigation }) {
   };
 
   return (
+          <ScrollView contentContainerStyle={styles.scrollViewContainer} keyboardShouldPersistTaps="handled">
+
     <View style={styles.container}>
 
       <Image
@@ -34,34 +38,57 @@ export default function RegisterScreen({ navigation }) {
       resizeMode="contain"
       />
       <Text style={styles.headerText}>Register to Continue</Text>
-      <TextInput
-        style={styles.input}
-        placeholder="Username"
-        value={username}
-        onChangeText={setUsername}
-      />
-      <TextInput
-        style={styles.input}
-        placeholder="Email"
-        value={email}
-        onChangeText={setEmail}
-        keyboardType="email-address"
-        autoCapitalize="none"
-      />
-      <TextInput
-        style={styles.input}
-        placeholder="Password"
-        value={password}
-        onChangeText={setPassword}
-        secureTextEntry
-      />
-      <TextInput
-        style={styles.input}
-        placeholder="Confirm Password"
-        value={confirmPassword}
-        onChangeText={setConfirmPassword}
-        secureTextEntry
-      />
+
+        <View style={styles.inputWrapper}>
+          <MaterialCommunityIcons name="account-outline" size={24} color="#9974f2" style={styles.icon} />
+          <TextInput
+            style={styles.input}
+            placeholder="Username"
+            value={password}
+            onChangeText={setUsername}
+            secureTextEntry
+            placeholderTextColor="#b9aafaff"
+          />
+        </View>
+
+
+             <View style={styles.inputWrapper}>
+          <MaterialCommunityIcons name="email-outline" size={24} color="#9974f2" style={styles.icon} />
+          <TextInput
+            style={styles.input}
+            placeholder="Email"
+            value={password}
+            onChangeText={setEmail}
+            secureTextEntry
+            placeholderTextColor="#b9aafaff"
+          />
+        </View>
+
+
+        <View style={styles.inputWrapper}>
+          <MaterialCommunityIcons name="lock-outline" size={24} color="#9974f2" style={styles.icon} />
+          <TextInput
+            style={styles.input}
+            placeholder="Password"
+            value={password}
+            onChangeText={setPassword}
+            secureTextEntry
+            placeholderTextColor="#b9aafaff"
+          />
+        </View>
+
+        <View style={styles.inputWrapper}>
+          <MaterialCommunityIcons name="lock-check-outline" size={24} color="#9974f2" style={styles.icon} />
+          <TextInput
+            style={styles.input}
+            placeholder="Confirm Password"
+            value={password}
+            onChangeText={setConfirmPassword}
+            secureTextEntry
+            placeholderTextColor="#b9aafaff"
+          />
+        </View>
+
 
       <TouchableOpacity style={styles.registerButton} onPress={handleRegister}>
         <Text style={styles.registerButtonText}>Register</Text>
@@ -74,14 +101,17 @@ export default function RegisterScreen({ navigation }) {
         </TouchableOpacity>
       </View>
     </View>
+    </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, justifyContent: 'center', padding: 20, backgroundColor: '#F9FAFD' },
+  container: { flex: 1, justifyContent: 'center', padding: 20, backgroundColor: '#fbf9feff' },
   topImage: { width: 180, height: 140, alignSelf: 'center', marginBottom: 15 },
-  headerText: { fontSize: 18, textAlign: 'center', marginBottom: 25, color: '#333' },
-  input: { backgroundColor: 'white', borderRadius: 14, marginBottom: 15, borderWidth: 1, borderColor: '#eee', padding: 15, fontSize: 16, elevation: 2 },
+  headerText: { fontSize: 18, textAlign: 'center', marginBottom: 25, color: '#9447f2' },
+  icon: { marginLeft: 12, marginRight: 6 },
+  inputWrapper: { flexDirection: 'row', alignItems: 'center', backgroundColor: '#ede4fc', borderRadius: 15, marginBottom: 16, shadowOpacity: 0.15, shadowColor: '#c19ceeff', shadowRadius: 5,maxWidth: 400, height: 50 },
+  input: { flex: 1, backgroundColor: 'transparent', padding: 5, fontSize: 14, borderRadius: 18 },
   registerButton: { backgroundColor: '#b47ff5ff', borderRadius: 25, alignItems: 'center', padding: 13, marginTop: 5, marginBottom: 15 },
   registerButtonText: { fontSize: 17, color: '#f2ececff', fontWeight: 'bold' },
   loginContainer: { flexDirection: 'row', alignItems: 'center', justifyContent: 'center',marginBottom: 150 },

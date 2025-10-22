@@ -34,7 +34,7 @@ export default function SignInScreen({ navigation }) {
         <Text style={styles.headerText}>Login to Continue</Text>
 
         <View style={styles.inputWrapper}>
-          <MaterialCommunityIcons name="email-outline" size={24} color="#9974f2" style={styles.icon} />
+          <MaterialCommunityIcons name="email-outline" size={24} color="#b9aafaff" style={styles.icon} />
           <TextInput
             style={styles.input}
             placeholder="Email"
@@ -42,18 +42,18 @@ export default function SignInScreen({ navigation }) {
             onChangeText={setEmail}
             keyboardType="email-address"
             autoCapitalize="none"
-            placeholderTextColor="#977fff"
+            placeholderTextColor="#b9aafaff"
           />
         </View>
         <View style={styles.inputWrapper}>
-          <MaterialCommunityIcons name="lock-outline" size={24} color="#9974f2" style={styles.icon} />
+          <MaterialCommunityIcons name="lock-outline" size={24} color="#b9aafaff" style={styles.icon} />
           <TextInput
             style={styles.input}
             placeholder="Password"
             value={password}
             onChangeText={setPassword}
             secureTextEntry
-            placeholderTextColor="#977fff"
+            placeholderTextColor="#b9aafaff"
           />
         </View>
 
@@ -73,28 +73,28 @@ export default function SignInScreen({ navigation }) {
 }
 
 const styles = StyleSheet.create({
-  scrollViewContainer: { flexGrow: 1, justifyContent: 'center', backgroundColor: '#fff' },
+  scrollViewContainer: { flexGrow: 1, justifyContent: 'center', backgroundColor: '#f1eafeff' },
   gradientBackground: {
     flex: 1,
     justifyContent: 'center',
     padding: 20,
-    backgroundColor: '#f7f3fe', // pale gradient effect
+    backgroundColor: '#fbf9feff', // pale gradient effect
     borderRadius: 30,
-    shadowColor: '#b684fc',
-    shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 0.3,
-    shadowRadius: 20,
-    elevation: 12,
-    margin: 12
+    // shadowColor: '#fbf9feff',
+    // shadowOffset: { width: 0, height: 4 },
+    // shadowOpacity: 0.3,
+    // shadowRadius: 20,
+    // elevation: 12,
+    // margin: 12
   },
   topImage: { width: 200, height: 140, alignSelf: 'center', marginBottom: 32 },
-  headerText: { fontSize: 22, textAlign: 'center', marginBottom: 38, color: '#9447f2', fontWeight: '500' },
-  inputWrapper: { flexDirection: 'row', alignItems: 'center', backgroundColor: '#ede4fc', borderRadius: 18, marginBottom: 16, shadowOpacity: 0.15, shadowColor: '#9447f2', shadowRadius: 5 },
+  headerText: { fontSize: 17, textAlign: 'center', marginBottom: 38, color: '#a360f5ff', fontWeight: '500' },
+  inputWrapper: { flexDirection: 'row', alignItems: 'center', backgroundColor: '#ede4fc', borderRadius: 18, marginBottom: 16, shadowOpacity: 0.15, shadowColor: '#c19ceeff', shadowRadius: 5 ,maxWidth: 400, height: 50},
   icon: { marginLeft: 12, marginRight: 6 },
-  input: { flex: 1, backgroundColor: 'transparent', padding: 16, fontSize: 16, borderRadius: 18 },
-  loginButton: { backgroundColor: '#9447f2', borderRadius: 30, alignItems: 'center', padding: 15, marginTop: 10, marginBottom: 22, shadowColor: '#7e31f6', shadowOpacity: 0.2, shadowRadius: 10 },
+  input: { flex: 1, backgroundColor: 'transparent', padding: 5, fontSize: 14, borderRadius: 18 },
+  loginButton: { backgroundColor: '#b580f6ff', borderRadius: 30, alignItems: 'center', padding: 15, marginTop: 10, marginBottom: 22, shadowColor: '#7e31f6', shadowOpacity: 0.2, shadowRadius: 10, },
   loginButtonText: { fontSize: 18, color: '#fff', fontWeight: 'bold', letterSpacing: 1 },
   signupContainer: { flexDirection: 'row', alignItems: 'center', justifyContent: 'center', marginBottom: 30 },
   signupQuestion: { color: '#777', fontSize: 15 },
-  signupText: { color: '#9447f2', fontWeight: 'bold', fontSize: 16 }
+  signupText: { color: '#9447f2', fontWeight: 'bold', fontSize: 14 }
 });
