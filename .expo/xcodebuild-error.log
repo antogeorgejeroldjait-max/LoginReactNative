@@ -1,2 +1,20 @@
-2025-10-29 12:40:10.254 xcodebuild[74810:7284378]  DVTDeviceOperation: Encountered a build number "" that is incompatible with DVTBuildVersion.
-2025-10-29 12:40:10.309 xcodebuild[74810:7284308] [MT] DVTDeviceOperation: Encountered a build number "" that is incompatible with DVTBuildVersion.
+2025-10-29 13:32:13.948 xcodebuild[87004:7371251]  DVTDeviceOperation: Encountered a build number "" that is incompatible with DVTBuildVersion.
+2025-10-29 13:32:15.484 xcodebuild[87004:7371055] [MT] DVTDeviceOperation: Encountered a build number "" that is incompatible with DVTBuildVersion.
+2025-10-29 13:32:15.761 xcodebuild[87004:7371246]  DVTAssertions: Warning in DVTiOSFrameworks/DTDeviceKitBase/DTDKRemoteDeviceData.m:409
+Details:  (null) deviceType from 3a26992b1c39c9649ff9651cb76ee5a24b88b315 was NULL when -platform called.
+Object:   <DTDKMobileDeviceToken: 0x7ff344d20ff0>
+Method:   -platform
+Thread:   <NSThread: 0x7ff3445c8880>{number = 6, name = (null)}
+Please file a bug at https://feedbackassistant.apple.com with this warning message and any useful information you can provide.
+2025-10-29 13:32:16.146 xcodebuild[87004:7371265]  DVTAssertions: Warning in DVTiOSFrameworks/DTDeviceKitBase/DTDKRemoteDeviceData.m:409
+Details:  (null) deviceType from 3a26992b1c39c9649ff9651cb76ee5a24b88b315 was NULL when -platform called.
+Object:   <DTDKMobileDeviceToken: 0x7ff344d20ff0>
+Method:   -platform
+Thread:   <NSThread: 0x7ff3459d4a90>{number = 10, name = (null)}
+Please file a bug at https://feedbackassistant.apple.com with this warning message and any useful information you can provide.
+2025-10-29 13:32:16.273 xcodebuild[87004:7371265]  DVTAssertions: Warning in DVTiOSFrameworks/DTDeviceKitBase/DTDKRemoteDeviceData.m:409
+Details:  (null) deviceType from 3a26992b1c39c9649ff9651cb76ee5a24b88b315 was NULL when -platform called.
+Object:   <DTDKMobileDeviceToken: 0x7ff344d20ff0>
+Method:   -platform
+Thread:   <NSThread: 0x7ff3459d4a90>{number = 10, name = (null)}
+Please file a bug at https://feedbackassistant.apple.com with this warning message and any useful information you can provide.

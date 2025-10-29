@@ -22,6 +22,7 @@ export default function SignInScreen({ navigation }) {
       Alert.alert('Error', 'Email and password must be filled');
       return;
     }
+    console.log('Firebase Email sign-in successful');
     signInWithEmailAndPassword(auth, email, password)
       .then(() => navigation.navigate('Home'))
       .catch(() => {
@@ -55,7 +56,7 @@ export default function SignInScreen({ navigation }) {
       // Firebase ku sign in pannunga
       await signInWithCredential(auth, googleCredential);
       
-      console.log('Firebase sign-in successful');
+      console.log('Firebase Google sign-in successful');
       
       // Success! Navigate to home
       navigation.navigate('Home');
