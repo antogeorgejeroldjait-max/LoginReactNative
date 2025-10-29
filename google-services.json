@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "991364178247",
+    "project_id": "loginreactnative-58345",
+    "storage_bucket": "loginreactnative-58345.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:991364178247:android:07c5e6c0cb9a38ae2c6c62",
+        "android_client_info": {
+          "package_name": "com.anonymous.myapptask"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "991364178247-o23ucbhmcijvuee3a2q29itmr7bcv49i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCkerMCIw9EzgyhMmkKOo95pTM8hL-Sfuc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "991364178247-o23ucbhmcijvuee3a2q29itmr7bcv49i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

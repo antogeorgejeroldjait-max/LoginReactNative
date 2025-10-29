@@ -11,7 +11,7 @@ const Stack = createNativeStackNavigator();
 function CustomBackButton({ navigation }) {
   return (
     <TouchableOpacity onPress={() => navigation.goBack()} style={{ marginLeft: 15 }}>
-      <Text style={{ color: '#9447f2', fontSize: 16 }}>Back</Text>
+      <Text style={{ color: '#9447f2', fontSize: 16, textAlign: 'center' }}>Back</Text>
     </TouchableOpacity>
   );
 }

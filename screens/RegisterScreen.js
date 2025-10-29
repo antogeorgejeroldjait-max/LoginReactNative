@@ -31,12 +31,12 @@ export default function RegisterScreen({ navigation }) {
 
     <View style={styles.container}>
 
-      <Image
-      source={require('../assets/loginImage.png')} // asset image use pannalam
-      // alternatively online image: source={{ uri: 'https://yoururl.com/image.png' }}
-      style={styles.topImage}
-      resizeMode="contain"
-      />
+        <Image 
+          source={require('../assets/loginImage.png')}
+          style={styles.topImage}
+          resizeMode="contain"
+        />
+
       <Text style={styles.headerText}>Register to Continue</Text>
 
         <View style={styles.inputWrapper}>
@@ -44,9 +44,10 @@ export default function RegisterScreen({ navigation }) {
           <TextInput
             style={styles.input}
             placeholder="Username"
-            value={password}
+            value={username}
             onChangeText={setUsername}
-            secureTextEntry
+            keyboardType="default"
+            autoCapitalize="none"
             placeholderTextColor="#b9aafaff"
           />
         </View>
@@ -57,9 +58,10 @@ export default function RegisterScreen({ navigation }) {
           <TextInput
             style={styles.input}
             placeholder="Email"
-            value={password}
+            value={email}
             onChangeText={setEmail}
-            secureTextEntry
+            keyboardType="email-address"
+            autoCapitalize="none"
             placeholderTextColor="#b9aafaff"
           />
         </View>
@@ -82,7 +84,7 @@ export default function RegisterScreen({ navigation }) {
           <TextInput
             style={styles.input}
             placeholder="Confirm Password"
-            value={password}
+            value={confirmPassword}
             onChangeText={setConfirmPassword}
             secureTextEntry
             placeholderTextColor="#b9aafaff"
@@ -107,7 +109,7 @@ export default function RegisterScreen({ navigation }) {
 
 const styles = StyleSheet.create({
   container: { flex: 1, justifyContent: 'center', padding: 20, backgroundColor: '#fbf9feff' },
-  topImage: { width: 180, height: 140, alignSelf: 'center', marginBottom: 15 },
+  topImage: { width: 200, height: 200, alignSelf: 'center', marginBottom: 15 },
   headerText: { fontSize: 18, textAlign: 'center', marginBottom: 25, color: '#9447f2' },
   icon: { marginLeft: 12, marginRight: 6 },
   inputWrapper: { flexDirection: 'row', alignItems: 'center', backgroundColor: '#ede4fc', borderRadius: 15, marginBottom: 16, shadowOpacity: 0.15, shadowColor: '#c19ceeff', shadowRadius: 5,maxWidth: 400, height: 50 },
